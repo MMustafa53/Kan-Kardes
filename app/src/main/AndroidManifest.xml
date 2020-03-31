@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.revay.android.kankardes">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:screenOrientation="portrait"
+        android:icon="@drawable/red_blood_drop"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/red_blood_drop"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IlkGiris"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ayarlar.AyarlarActivity"
+            android:label="@string/title_activity_ayarlar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.revay.android.kankardes.MainActivity" />
+        </activity>
+        <activity
+            android:name=".OneriSikayet"
+            android:label="@string/title_oneri_istekler_activty"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.revay.android.kankardes.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hakkinda"
+            android:label="@string/title_hakkinda_activity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.revay.android.kankardes.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".YeniIstek"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".OncekiBagislar"
+            android:label="@string/title_activity_onceki_bagislar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.revay.android.kankardes.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCoKmfgY46M0fFfn5hTwwLJnbmVx-xLZv8" />
+    </application>
+
+</manifest>

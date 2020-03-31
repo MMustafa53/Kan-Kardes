@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="org.revay.android.kankardes.YeniIstek">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yeni_istek_ad_soyad_text"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextYeniIstekAdSoyad"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupBilgiSecim"
+            app:layout_constraintTop_toTopOf="@+id/editTextYeniIstekAdSoyad" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupBilgiSecim"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonKendisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/yeni_istek_kendi_bilgileriniz_text" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBaskasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/yeni_istek_baska_bilgiler_text" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editTextYeniIstekAdSoyad"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroupBilgiSecim"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupBilgiSecim" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/yeni_istek_telefon_no_text"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextYeniIstekTelNo"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/editTextYeniIstekTelNo" />
+
+        <EditText
+            android:id="@+id/editTextYeniIstekTelNo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/editTextYeniIstekAdSoyad"
+            app:layout_constraintTop_toBottomOf="@+id/editTextYeniIstekAdSoyad" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yeni_istek_yasanilan_sehir_text"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerYeniIstekSehir"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/spinnerYeniIstekSehir" />
+
+        <Spinner
+            android:id="@+id/spinnerYeniIstekSehir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/turkey_city"
+            app:layout_constraintEnd_toEndOf="@+id/editTextYeniIstekTelNo"
+            app:layout_constraintTop_toBottomOf="@+id/editTextYeniIstekTelNo" />
+
+        <Spinner
+            android:id="@+id/spinnerYeniIstekKanGrubu"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/kan_gruplari"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerYeniIstekSehir"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerYeniIstekSehir" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yeni_istek_kan_grubu_text"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerYeniIstekKanGrubu"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/spinnerYeniIstekKanGrubu" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yeni_istek_hastane_text"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextYeniIstekHastane"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/editTextYeniIstekHastane" />
+
+        <EditText
+            android:id="@+id/editTextYeniIstekHastane"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerYeniIstekKanGrubu"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerYeniIstekKanGrubu" />
+
+        <Button
+            android:id="@+id/buttonYeniIstekKaydet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/yeni_istek_kaydet_button_text"
+            android:onClick="kaydet"
+            app:layout_constraintEnd_toEndOf="@+id/editTextYeniIstekHastane"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/editTextYeniIstekHastane" />
+
+        <ImageButton
+            android:id="@+id/plcButton"
+            android:layout_width="56dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/white"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/editTextYeniIstekHastane"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerYeniIstekKanGrubu"
+            app:srcCompat="@drawable/indir" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

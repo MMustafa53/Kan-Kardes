@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditTextPreference
+        android:key="@string/pref_ad_soyad_key"
+        android:defaultValue="@string/pref_ad_soyad_default"
+        android:title="@string/pref_ad_soyad_title" />
+
+    <EditTextPreference
+        android:defaultValue="@string/pref_tel_no_default"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:key="@string/pref_tel_no_key"
+        android:textSize="10px"
+        android:title="@string/pref_tel_no_title" />
+
+    <ListPreference
+        android:key="@string/pref_yasanilan_yer_key"
+        android:defaultValue="@string/pref_yasanilan_yer_default"
+        android:entries="@array/turkey_city"
+        android:entryValues="@array/turkey_city"
+        android:title="@string/pref_yasanilan_yer_title" />
+
+    <ListPreference
+        android:key="@string/pref_kan_grubu_key"
+        android:defaultValue="@string/pref_kan_grubu_default"
+        android:entries="@array/kan_gruplari"
+        android:entryValues="@array/kan_gruplari"
+        android:title="@string/pref_kan_grubu_title" />
+
+    <!--<Preference-->
+        <!--android:title="VID"-->
+        <!--android:key="@string/pref_vid_key"-->
+        <!--android:defaultValue="@string/pref_vid_default"-->
+        <!--android:enabled="false" />-->
+</PreferenceScreen>
